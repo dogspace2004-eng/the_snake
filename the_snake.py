@@ -1,5 +1,4 @@
 from random import choice
-import random
 import pygame as pg
 
 # Константы для размеров поля и сетки:
@@ -119,7 +118,7 @@ class Snake(GameObject):
         """Сбрасывает змейку в начальное положение."""
         self.length = 1
         self.positions = [self.position]
-        self.direction = random.choice([UP, DOWN, LEFT, RIGHT])
+        self.direction = choice([UP, DOWN, LEFT, RIGHT])
         self.last = None
 
     def get_head_position(self):
